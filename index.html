@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>12 Стульев / 12 Tooli</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="lang-switcher">
+            <button onclick="changeLang('et')">ET</button>
+            <button onclick="changeLang('ru')">RU</button>
+            <button onclick="changeLang('en')">EN</button>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#menu-section" id="link-menu">Меню</a></li>
+            <li><a href="#about" id="link-about">О нас</a></li>
+            <li><a href="#contacts" id="link-contacts">Контакты</a></li>
+        </ul>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-overlay">
+            <h1 id="main-title" class="gold-text">12 СТУЛЬЕВ</h1>
+            <p id="hero-subtitle" class="subtitle">Уют и вкус в самом сердце города</p>
+        </div>
+    </header>
+    <section id="about" class="info-section">
+    <h2 class="gold-text" id="about-title">О Кафе</h2>
+    <p id="about-text">
+        12 Стульев — это тихая гавань для ценителей изысканности. 
+        Место, где традиции встречаются с роскошью.
+    </p>
+</section>
+
+    <section id="contacts" class="info-section">
+        <h2 class="gold-text" id="contacts-title">Контакты</h2>
+        <div class="contact-grid">
+            <div class="contact-item" onclick="openMap('https://www.google.com/maps/search/?api=1&query=viru+keskus')">
+                <strong id="label-address">Адрес:</strong>
+                <p>Kolde pst 100, Tallinn</p>
+            </div>
+            <div class="contact-item">
+                <strong id="label-hours">Время работы:</strong>
+                <p id="work-hours">Пн-Вс: 09:00 - 21:00</p>
+            </div>
+        </div>
+    </section>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Меню | 12 Стульев</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="lang-switcher">
+            <button onclick="changeLang('et')">ET</button>
+            <button onclick="changeLang('ru')">RU</button>
+            <button onclick="changeLang('en')">EN</button>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html" id="link-home">Главная</a></li>
+            <li><a href="menu.html" id="link-menu" class="active">Меню</a></li>
+        </ul>
+    </nav>
+
+    <section id="menu-section" class="info-section">
+        <h1 class="gold-text" id="menu-title">Меню</h1>
+        
+        <div class="menu-grid">
+            <div class="menu-item">
+                <span id="dish-1">Завтрак Остапа</span>
+                <span class="price">12.00€</span>
+            </div>
+            <div class="menu-item">
+                <span id="dish-2">Кофе "Киса"</span>
+                <span class="price">4.50€</span>
+            </div>
+        </div>
+    </section>
+
+    <script src=".js/main.js"></script>
+</body>
+</html>

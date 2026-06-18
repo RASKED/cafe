@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Меню | 12 Стульев</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="lang-switcher">
+            <button onclick="changeLang('et')">ET</button>
+            <button onclick="changeLang('ru')">RU</button>
+            <button onclick="changeLang('en')">EN</button>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="menu.html" class="active">Меню</a></li>
+        </ul>
+    </nav>
+
+    <header class="menu-header">
+        <h1 class="gold-text" id="menu-page-title">Наше Меню</h1>
+    </header>
+
+    <main class="info-section">
+        <div class="menu-category">
+            <h3 class="gold-text">Кофе и Напитки</h3>
+            <div class="menu-item">
+                <span id="item-1">Эспрессо</span>
+                <span class="price">3.00€</span>
+            </div>
+            <div class="menu-item">
+                <span id="item-2">Капучино</span>
+                <span class="price">4.50€</span>
+            </div>
+        </div>
+    </main>
+
+    <script src=".js/main.js"></script>
+</body>
+</html>

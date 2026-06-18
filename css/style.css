@@ -1,0 +1,373 @@
+/* 1. Общие настройки (сброс отступов) */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #0f0f0f; /* Очень глубокий серый, почти черный */
+    color: #e0e0e0;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* 2. Навигация */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+    background-color: rgba(18, 18, 18, 0.95);
+    border-bottom: 1px solid #d4af37; /* Тонкая золотая нить снизу */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #d4af37;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #fff;
+    text-shadow: 0 0 10px #d4af37; /* Золотое свечение при наведении */
+}
+
+/* 3. Кнопки переключения языков */
+.lang-switcher button {
+    background: transparent;
+    border: 1px solid #d4af37;
+    color: #d4af37;
+    padding: 5px 10px;
+    margin-right: 5px;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    transition: 0.3s;
+}
+
+.lang-switcher button:hover {
+    background: #d4af37;
+    color: #121212;
+}
+
+/* 4. Главный экран (Hero) */
+.hero {
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)), 
+                url('https://media-cdn.tripadvisor.com/media/photo-s/0f/dc/db/90/caption.jpg'); /* Здесь будет твое фото позже */
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+}
+
+.gold-text {
+    font-family: 'Playfair Display', serif;
+    color: #d4af37;
+    font-size: 4rem;
+    letter-spacing: 8px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-style: italic;
+    font-size: 1.2rem;
+    color: #c5a028;
+}
+
+/* 5. Секция Контактов */
+.info-section {
+    padding: 160px 10%;
+    text-align: center;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.contact-item {
+    padding: 20px;
+    border: 1px solid rgba(212, 175, 55, 0.3); /* Полупрозрачная золотая рамка */
+    transition: 0.3s;
+}
+
+.contact-item:hover {
+    border-color: #d4af37;
+    transform: translateY(-5px); /* Легкий подъем карточки */
+    cursor: pointer;
+}
+
+.contact-item strong {
+    display: block;
+    color: #d4af37;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+.menu-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0;
+    border-bottom: 1px dotted #d4af37;
+    font-size: 1.2rem;
+}
+
+.price {
+    color: #d4af37;
+    font-weight: bold;
+}
+
+.menu-header {
+    padding: 60px 0;
+    background: #1a1a1a;
+    border-bottom: 1px solid #d4af37;
+}
+
+.menu-category {
+    margin-bottom: 50px;
+}
+
+.menu-category h3 {
+    margin-bottom: 30px;
+    font-size: 1.8rem;
+    border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.active {
+    border-bottom: 2px solid #d4af37; /* Подчеркивает вкладку, на которой мы находимся */
+}
+
+#about p {
+    font-size: 1.4rem;
+    line-height: 2;
+    font-style: italic;
+    color: #c5a028; /* Приглушенное золото */
+    max-width: 700px;
+    margin: 20px auto;
+}
+
+#about-text {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #e0e0e0;
+    max-width: 800px;
+    margin: 20px auto;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Добавим немного отступов для секции меню, чтобы она смотрелась элитно */
+#menu-section {
+    background: linear-gradient(to bottom, #0f0f0f, #1a1a1a);
+    padding: 100px 10%;
+    border-top: 1px solid rgba(212, 175, 55, 0.1);
+}
+/* --- Продвинутая мобильная оптимизация --- */
+
+/* --- Полная мобильная оптимизация (шрифты уменьшены в 1.3 раза) --- */
+
+@media (max-width: 768px) {
+    /* 1. Общие настройки отступов */
+    .navbar, .info-section, #menu-section {
+        padding: 15px 5% !important;
+    }
+
+    /* 2. Навигация */
+    .navbar {
+        flex-direction: column;
+        gap: 12px;
+        padding-top: 15px;
+    }
+
+    .nav-links {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .nav-links a {
+        font-size: 0.7rem; /* Было 0.9rem */
+    }
+
+    .nav-links li {
+        margin: 5px 8px;
+    }
+
+    /* 3. Главный экран (Hero) */
+    .hero {
+        height: 55vh;
+    }
+
+    .gold-text {
+        font-size: 1.7rem; /* Было 2.2rem */
+        letter-spacing: 2px;
+        line-height: 1.2;
+    }
+
+    .subtitle {
+        font-size: 0.75rem; /* Было 1rem */
+        padding: 0 10px;
+    }
+
+    /* 4. Меню и категории */
+    .menu-item {
+        font-size: 0.8rem; /* Было ~1rem */
+        border-bottom: 1px dotted rgba(212, 175, 55, 0.5);
+    }
+
+    .menu-category h3 {
+        font-size: 1.15rem; /* Было 1.5rem */
+        text-align: center;
+        width: 100%;
+    }
+
+    /* 5. Текстовые блоки (О нас) */
+    #about p {
+        font-size: 1rem; /* Было 1.4rem */
+        line-height: 1.6;
+    }
+
+    #about-text {
+        font-size: 0.85rem; /* Было 1.1rem */
+        line-height: 1.5;
+    }
+
+    /* 6. Контакты */
+    .contact-item strong {
+        font-size: 0.7rem; /* Было 0.9rem */
+    }
+
+    .contact-item {
+        font-size: 0.85rem;
+        padding: 12px;
+    }
+}
+
+/* Для сверхмалых экранов (до 480px) */
+@media (max-width: 480px) {
+    .gold-text {
+        font-size: 1.4rem; /* Дополнительное уменьшение для баланса */
+    }
+    
+    .lang-switcher button {
+        font-size: 0.7rem;
+        padding: 6px 10px;
+    }
+}   
+@media (max-width: 768px) {
+    /* 1. Общие настройки отступов */
+    .navbar, .info-section, #menu-section {
+        padding: 15px 5% !important; /* Уменьшаем боковые поля, чтобы текст не был слишком узким */
+    }
+
+    /* 2. Навигация */
+    .navbar {
+        flex-direction: column; /* Логотип и ссылки встают друг под другом */
+        gap: 15px;
+        padding-top: 20px;
+    }
+
+    .nav-links {
+        justify-content: center;
+        flex-wrap: wrap; /* Ссылки переносятся на новую строку, если их много */
+        margin-left: 0;
+    }
+
+    .nav-links li {
+        margin: 5px 10px; /* Уменьшаем расстояние между пунктами меню */
+    }
+
+    /* 3. Главный экран (Hero) */
+    .hero {
+        height: 60vh; /* Чуть уменьшаем высоту на мобильных */
+    }
+
+    .gold-text {
+        font-size: 2.2rem; /* Значительно уменьшаем заголовок */
+        letter-spacing: 3px; /* Сужаем межбуквенный интервал */
+        line-height: 1.2;
+    }
+
+    .subtitle {
+        font-size: 1rem;
+        padding: 0 10px;
+    }
+
+    /* 4. Меню и цены */
+    .menu-item {
+        font-size: 1rem; /* Уменьшаем шрифт, чтобы название и цена не налезали друг на друга */
+        flex-direction: row; /* Оставляем в строку, но если названия блюд длинные — можно column */
+        align-items: flex-start;
+    }
+
+    .menu-category h3 {
+        font-size: 1.5rem;
+        width: 100%;
+        text-align: center;
+    }
+
+    /* 5. Текстовые блоки "О нас" */
+    #about p, #about-text {
+        font-size: 1.1rem;
+        line-height: 1.6;
+        text-align: left; /* На телефонах выравнивание по левому краю читается лучше */
+    }
+
+    /* 6. Контакты */
+    .contact-grid {
+        gap: 20px; /* Уплотняем карточки */
+    }
+
+    .contact-item {
+        padding: 15px;
+    }
+}
+
+/* Дополнительная правка для совсем маленьких экранов (iPhone SE и т.д.) */
+@media (max-width: 480px) {
+    .gold-text {
+        font-size: 1.8rem;
+    }
+    
+    .lang-switcher button {
+        padding: 8px 12px; /* Увеличиваем область нажатия (Touch Target) */
+    }
+}
+.gold-text {
+    background: linear-gradient(to right, #bf953f, #fcf6ba, #b38728, #fbf5b7, #aa771c);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    /* Оставляем старые настройки для надежности */
+    font-family: 'Playfair Display', serif;
+    font-size: 4rem;
+    letter-spacing: 8px;
+}
